@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">@color/c_2f374a</color>
+    <color name="colorAccent">@color/c_2f374a</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="c_2f374a">#2f374a</color>
+    <color name="c_ba0020">#ba0020</color>
+    <color name="c_f3ffffff">#f3ffffff</color>
+    <color name="c_4f6cbb">#4f6cbb</color>
+    <color name="c_7e7e7e">#7e7e7e</color>
+    <color name="c_f0f1f1">#f0f1f1</color>
+    <color name="c_616072">#616072</color>
+    <color name="c_2f374a_50">#7f2f374a</color>
+    <color name="c_828282">#828282</color>
+    <color name="c_e3e3e4">#e3e3e4</color>
+    <color name="c_a6a6a6">#a6a6a6</color>
+    <color name="c_68ba0020">#68ba0020</color>
+    <color name="c_55ba0020">#22ba0020</color>s
+    <color name="c_979797">#979797</color>
+    <color name="c_aa0019">#aa0019</color>
+    <color name="c_4cd964">#4cd964</color>
+    <color name="c_b7b8b9">#b7b8b9</color>
+    <color name="c_797979">#797979</color>
+    <color name="c_20000000">#20000000</color>
+    <color name="c_999">#999</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_484848">#484848</color>
+    <color name="c_f4f4f4">#f4f4f4</color>
+    <color name="zone_1_light_bg">#f4f4f4</color>
+    <color name="zone_1_dark_bg">#cbcbcb</color>
+    <color name="zone_2_light_bg">#ddf3f9</color>
+    <color name="zone_2_dark_bg">#4a99ad</color>
+    <color name="zone_3_light_bg">#e0fed7</color>
+    <color name="zone_3_dark_bg">#6bba54</color>
+    <color name="zone_4_light_bg">#fef2d7</color>
+    <color name="zone_4_dark_bg">#d1a654</color>
+    <color name="zone_5_light_bg">#fee1e6</color>
+    <color name="zone_5_dark_bg">#ba0020</color>
+
+
+    <!--Rider summary colors-->
+    <color name="black_fade">#3f485b</color>
+    <color name="c_1d8296">#1d8296</color>
+    <color name="c_414859">#414859</color>
+    <color name="c_000000_40">#98000000</color>
+    <color name="c_f5f5f5">#f5f5f5</color>
+    <color name="c_181732">#181732</color>
+    <color name="c_B3ffffff">#b3ffffff</color>
+    <color name="c_d8d8d8">#d8d8d8</color>
+    <color name="c_000000_80">#c6000000</color>
+    <color name="c_606060">#606060</color>
+    <color name="graph_grid_line">#c7c7c7</color>
+</resources>

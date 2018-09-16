@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<android.support.v7.widget.CardView
+    android:id="@+id/game_card"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:elevation="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/c_000000_40"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/game_image"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp" />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/game_name"
+        android:maxLines="1"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
