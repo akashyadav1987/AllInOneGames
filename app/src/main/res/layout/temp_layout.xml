@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#efeded">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/container_first"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_ebay"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/first"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Custom Tetris"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_olx"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="80dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/fifth"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Hextris"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container_second"
+                android:layout_below="@+id/container_first"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_quikr"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/radio"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="2048"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_spoil"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="80dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/third"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Ohh1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container_third"
+                android:layout_below="@+id/container_second"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="120dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/fourth"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="pappu-pakia"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_allindia"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="100dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/gun"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Spashal"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container_forth"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/third"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Coil"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="80dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/third"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="The pond"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/gun"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Pop pop win"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="80dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/third"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Sudoku"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/fifth"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Maze 3D"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="80dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/octopus"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="The house"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/third"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Open Lara"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:elevation="80dp"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:layout_margin="@dimen/margin_medium"
+                            android:src="@drawable/octopus"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Elemental one"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

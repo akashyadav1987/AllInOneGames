@@ -43,12 +43,11 @@ public class AwesomeGameListFragment extends CommonFragment {
         gamesUrl.add("https://thepond.zolmeister.com/");
         gamesUrl.add("http://dart-lang.github.io/sample-pop_pop_win/");
         gamesUrl.add("http://baruchel.insomnia247.nl/sudoku-js/sudoku.html");
-        gamesUrl.add("http://baruchel.insomnia247.nl/sudoku-js/sudoku.html");
         gamesUrl.add("http://demonixis.github.io/Maze3D/");
         gamesUrl.add("https://the-house.arturkot.pl/");
         gamesUrl.add("http://xproger.info/projects/OpenLara/");
         gamesUrl.add("http://voithos.io/elemental-one/");
-        gamesUrl.add("https://gamejolt.com/games/beatrix/27454");
+       
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
