@@ -2,7 +2,6 @@ package game.trending.com.allinonegame.bestgames;
 
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +9,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import game.trending.com.allinonegame.IndoorGamesAdapter.GamesAdapter;
 import game.trending.com.allinonegame.R;
 import game.trending.com.allinonegame.kidsgame.BaseActivity;
 import game.trending.com.allinonegame.puzzlegames.WebViewFragment;
 import game.trending.com.allinonegame.racinggames.CommonFragment;
-import game.trending.com.allinonegame.widget.SpacesItemDecoration;
 
 /**
  * Created by akashyadav on 9/16/18.
@@ -171,7 +168,9 @@ public class AwesomeGameListFragment extends CommonFragment implements View.OnCl
         bundle.putString("url",url);
         bundle.putString("title","Play Games");
         webViewFragment.setArguments(bundle);
-        ((BaseActivity)getActivity()).addFragmentWithBackStack(webViewFragment,true);
-    
+        if (((BaseActivity)getActivity()) != null) {
+            ((BaseActivity)getActivity()).addFragmentWithBackStack(webViewFragment,true);
+        }
+
     }
 }

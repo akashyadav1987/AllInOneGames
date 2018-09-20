@@ -8,9 +8,8 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
   >
 
-
-
     <ScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -24,7 +23,7 @@
             <LinearLayout
                 android:id="@+id/container_first"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
                     android:id="@+id/cyber_orb"
@@ -33,7 +32,7 @@
                     android:layout_height="match_parent"
                     android:elevation="8dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
                     <LinearLayout
@@ -48,11 +47,12 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/first"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Cyber Orb"
+                            android:textSize="@dimen/_14sdp"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -66,7 +66,7 @@
                     android:layout_height="match_parent"
                     android:elevation="80dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -82,11 +82,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/fifth"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Tetris"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -98,7 +100,7 @@
                 android:layout_below="@+id/container_first"
                 android:layout_marginTop="@dimen/margin_large"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
 
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
@@ -108,7 +110,7 @@
                     android:layout_height="match_parent"
                     android:elevation="8dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -124,11 +126,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/radio"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="2048"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -141,7 +145,7 @@
                     android:layout_height="match_parent"
                     android:elevation="80dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -157,11 +161,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/third"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Pacman"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -173,7 +179,7 @@
                 android:layout_below="@+id/container_second"
                 android:layout_marginTop="@dimen/margin_large"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
 
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
@@ -183,7 +189,7 @@
                     android:layout_height="match_parent"
                     android:elevation="120dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
                     <LinearLayout
@@ -198,10 +204,12 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/fourth"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:textSize="@dimen/_14sdp"
+
                             android:text="Don't you fill it"
                             android:gravity="center"
                             android:layout_gravity="center"
@@ -217,7 +225,7 @@
                     android:layout_height="match_parent"
                     android:elevation="100dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -233,11 +241,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/gun"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Spashal"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -247,7 +257,7 @@
             <LinearLayout
                 android:id="@+id/container_forth"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
                     android:id="@+id/coil"
@@ -256,7 +266,7 @@
                     android:layout_height="match_parent"
                     android:elevation="8dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
                     <LinearLayout
@@ -271,11 +281,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/third"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Coil"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -289,7 +301,7 @@
                     android:layout_height="match_parent"
                     android:elevation="80dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -305,12 +317,14 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/third"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="The pond"
                             android:gravity="center"
+                            android:textSize="@dimen/_14sdp"
+
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
                     </LinearLayout>
@@ -319,7 +333,7 @@
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
                     android:id="@+id/pop_win"
@@ -329,7 +343,7 @@
                     android:layout_height="match_parent"
                     android:elevation="8dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
                     <LinearLayout
@@ -344,10 +358,12 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/gun"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:textSize="@dimen/_14sdp"
+
                             android:text="Pop pop win"
                             android:gravity="center"
                             android:layout_gravity="center"
@@ -362,7 +378,7 @@
                     android:layout_height="match_parent"
                     android:elevation="80dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -378,11 +394,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/third"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Sudoku"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -392,7 +410,7 @@
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
                     android:id="@+id/maze"
@@ -401,7 +419,7 @@
                     android:layout_height="match_parent"
                     android:elevation="8dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
                     <LinearLayout
@@ -416,11 +434,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/fifth"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="Maze 3D"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -433,7 +453,7 @@
                     android:layout_height="match_parent"
                     android:elevation="80dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -449,11 +469,13 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/octopus"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:text="The house"
+                            android:textSize="@dimen/_14sdp"
+
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -463,7 +485,7 @@
             <LinearLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
                     android:id="@+id/open_lara"
@@ -472,7 +494,7 @@
                     android:layout_height="match_parent"
                     android:elevation="8dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
                     <LinearLayout
@@ -487,10 +509,12 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/third"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:textSize="@dimen/_14sdp"
+
                             android:text="Open Lara"
                             android:gravity="center"
                             android:layout_gravity="center"
@@ -505,7 +529,7 @@
                     android:layout_height="match_parent"
                     android:elevation="80dp"
                     card_view:cardBackgroundColor="@color/white"
-                    card_view:cardCornerRadius="8dp"
+                    card_view:cardCornerRadius="2dp"
                     app:cardUseCompatPadding="true"
                     >
 
@@ -521,10 +545,12 @@
                             android:layout_margin="@dimen/margin_medium"
                             android:src="@drawable/octopus"
                             />
-                        <TextView
+                        <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
+                            android:textSize="@dimen/_14sdp"
+
                             android:text="Clumsy Bird"
                             android:gravity="center"
                             android:layout_gravity="center"
