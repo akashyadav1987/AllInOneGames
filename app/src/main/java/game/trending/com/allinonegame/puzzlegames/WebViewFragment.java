@@ -31,8 +31,10 @@ public class WebViewFragment extends CommonFragment {
            WebView webView = (WebView) view.findViewById(R.id.webview);
            progressBar=view.findViewById(R.id.pbHeaderProgress);
            webView.getSettings().setJavaScriptEnabled(true);
+           
            Activity activity=getActivity();
-           String url="https://duckhuntjs.com/";
+           Bundle bundle=getArguments();
+           String url=bundle.getString("url");
 
            //String url=getArguments().getString("url");
            String title=getArguments().getString("title");

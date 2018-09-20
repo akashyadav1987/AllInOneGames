@@ -27,7 +27,7 @@
                 android:layout_height="120dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
-                    android:id="@+id/card_ebay"
+                    android:id="@+id/cyber_orb"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -52,14 +52,15 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="Custom Tetris"
+                            android:text="Cyber Orb"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
-                    android:id="@+id/card_olx"
+                    android:id="@+id/tetris"
+
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -85,7 +86,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="Hextris"
+                            android:text="Tetris"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -101,7 +102,7 @@
 
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
-                    android:id="@+id/card_quikr"
+                    android:id="@+id/two_four_eight"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -134,7 +135,7 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
-                    android:id="@+id/card_spoil"
+                    android:id="@+id/pacman"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -160,7 +161,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="Ohh1"
+                            android:text="Pacman"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -176,7 +177,7 @@
 
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
-
+                    android:id="@+id/dont_you"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -201,7 +202,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="pappu-pakia"
+                            android:text="Don't you fill it"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>
@@ -210,7 +211,7 @@
 
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
-                    android:id="@+id/card_allindia"
+                    android:id="@+id/spashal"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -249,7 +250,7 @@
                 android:layout_height="120dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
-
+                    android:id="@+id/coil"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -281,6 +282,7 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
+                    android:id="@+id/pond"
 
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -320,6 +322,7 @@
                 android:layout_height="120dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
+                    android:id="@+id/pop_win"
 
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -352,6 +355,7 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
+                    android:id="@+id/sudoku"
 
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -391,7 +395,7 @@
                 android:layout_height="120dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
-
+                    android:id="@+id/maze"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -423,7 +427,7 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
-
+                    android:id="@+id/the_house"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -462,7 +466,7 @@
                 android:layout_height="120dp"
                 android:orientation="horizontal">
                 <android.support.v7.widget.CardView
-
+                    android:id="@+id/open_lara"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -494,6 +498,7 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
+                    android:id="@+id/clumsy_bird"
 
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -520,7 +525,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="Elemental one"
+                            android:text="Clumsy Bird"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textColor="@color/black"/>

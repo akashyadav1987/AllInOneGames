@@ -25,9 +25,7 @@ open class BaseActivity : FunGamesBaseActivityParent() {
 
     }
 
-    fun removeLocationUpdate() {
-        Log.e("BaseActivity", "removeLocationUpdate: " + "removeLocation Call")
-    }
+
 
     override fun onPostResume() {
         super.onPostResume()
@@ -77,23 +75,23 @@ open class BaseActivity : FunGamesBaseActivityParent() {
         fragTransaction.commitAllowingStateLoss()
     }
 
-    companion object {
-
-        fun hideSoftKeyboard(activity: Activity?) {
-            if (activity != null) {
-                val inputManager = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                if (activity.currentFocus != null && inputManager != null) {
-                    inputManager.hideSoftInputFromWindow(activity.currentFocus!!.windowToken, 0)
-                    inputManager.hideSoftInputFromInputMethod(activity.currentFocus!!.windowToken, 0)
-                }
-            }
-        }
-
-        fun hideSoftKeyboard(view: View?) {
-            if (view != null) {
-                val inputManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                inputManager?.hideSoftInputFromWindow(view.windowToken, 0)
-            }
-        }
-    }
+//    companion object {
+//
+//        fun hideSoftKeyboard(activity: Activity?) {
+//            if (activity != null) {
+//                val inputManager = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//                if (activity.currentFocus != null && inputManager != null) {
+//                    inputManager.hideSoftInputFromWindow(activity.currentFocus!!.windowToken, 0)
+//                    inputManager.hideSoftInputFromInputMethod(activity.currentFocus!!.windowToken, 0)
+//                }
+//            }
+//        }
+//
+//        fun hideSoftKeyboard(view: View?) {
+//            if (view != null) {
+//                val inputManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//                inputManager?.hideSoftInputFromWindow(view.windowToken, 0)
+//            }
+//        }
+//    }
 }
