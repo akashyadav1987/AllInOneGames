@@ -6,9 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
-import game.trending.com.allinonegame.R;
 
 
 /**
@@ -26,10 +23,8 @@ public class CommonFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         try {
             if((GlobalReferences.getInstance().toolbar!=null)) {
-                TextView textView = (TextView) GlobalReferences.getInstance().toolbar.findViewById(R.id.title);
-                textView.setText(screenTitle);
+                GlobalReferences.getInstance().toolbar.setTitle(screenTitle);
             }
-               // GlobalReferences.getInstance().toolbar.setNavigationIcon(R.drawable.menu);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -55,21 +50,15 @@ public class CommonFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
     }
+
     public void onRefresh() {
         try{
             if((GlobalReferences.getInstance().toolbar!=null)) {
-                TextView textView = (TextView) GlobalReferences.getInstance().toolbar.findViewById(R.id.title);
-                textView.setText(screenTitle);
-            }
-            try {
-                if (GlobalReferences.getInstance().progressBar.getVisibility() == View.VISIBLE) {
-                   // GlobalReferences.getInstance().progressBar.setVisibility(View.GONE);
-                }
-            }catch (Exception e){
-                e.printStackTrace();
+                GlobalReferences.getInstance().toolbar.setTitle(screenTitle);
             }
         }catch (Exception e){
             e.printStackTrace();
         }
     }
+
 }

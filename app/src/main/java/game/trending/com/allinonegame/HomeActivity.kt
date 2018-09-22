@@ -1,74 +1,144 @@
 package game.trending.com.allinonegame
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v4.view.GravityCompat
+import android.support.v4.app.Fragment
+import android.support.v7.app.ActionBarDrawerToggle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
+import android.view.View
 import com.special.ResideMenu.ResideMenu
 import com.special.ResideMenu.ResideMenuItem
 import game.trending.com.allinonegame.bestgames.AwesomeGameListFragment
+import game.trending.com.allinonegame.fragment.AboutUsFragment
+import game.trending.com.allinonegame.fragment.FeedBackFragment
 import game.trending.com.allinonegame.kidsgame.BaseActivity
+import game.trending.com.allinonegame.racinggames.CommonFragment
 import game.trending.com.allinonegame.racinggames.GlobalReferences
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.app_bar_home.*
 
 
+class HomeActivity : BaseActivity(), ResideMenu.OnMenuListener, View.OnClickListener {
 
+    private var gamesMenuItem: ResideMenuItem? = null
+    private var feedBackMenuItem: ResideMenuItem? = null
+    private var aboutUsMenuItem: ResideMenuItem? = null
 
+    /***On click of items **/
+    override fun onClick(view: View?) {
+        if (view == gamesMenuItem) {
+            changeFragment(AwesomeGameListFragment());
+        } else if (view == feedBackMenuItem) {
+            changeFragment(FeedBackFragment())
+        } else if (view == aboutUsMenuItem) {
+            changeFragment(AboutUsFragment())
+        }
+    }
 
-class HomeActivity : BaseActivity(), ResideMenu.OnMenuListener {
+    /*switching to fragment**/
+    fun changeFragment(fragment: Fragment) {
+        addFragmentWithBackStack(fragment, true)
+        if(resideMenu.isOpened)
+            resideMenu.closeMenu()
+    }
 
 
     override fun openMenu() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun closeMenu() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    private lateinit var resideMenu:ResideMenu
+    private lateinit var resideMenu: ResideMenu
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
         GlobalReferences.getInstance().baseActivity = this;
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+        GlobalReferences.getInstance().toolbar = toolbar
 
         // attach to current activity;
         resideMenu = ResideMenu(this)
-        resideMenu.setBackground(R.drawable.banner1)
+        resideMenu.setBackground(R.color.white)
         resideMenu.attachToActivity(this)
+        resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT)
 
-        // create menu items;
-        val titles = arrayOf("Home", "Profile", "Calendar", "Settings")
-        val icon = intArrayOf(R.drawable.ic_menu_camera, R.drawable.ic_menu_gallery, R.drawable.ic_menu_send, R.drawable.ic_menu_share)
+        gamesMenuItem = ResideMenuItem(this, R.drawable.games, "Games")
+        feedBackMenuItem = ResideMenuItem(this, R.drawable.ic_feedback, "FeedBack")
+        aboutUsMenuItem = ResideMenuItem(this, R.drawable.ic_about_us, "About Us")
 
-        for (i in titles.indices) {
-            val item = ResideMenuItem(this, icon[i], titles[i])
-           // item.setOnClickListener(this)
-            resideMenu.addMenuItem(item, ResideMenu.DIRECTION_LEFT) // or  ResideMenu.DIRECTION_RIGHT
+        gamesMenuItem?.setOnClickListener(this)
+        feedBackMenuItem?.setOnClickListener(this)
+        aboutUsMenuItem?.setOnClickListener(this)
+
+        resideMenu.addMenuItem(gamesMenuItem, ResideMenu.DIRECTION_LEFT) // or  ResideMenu.DIRECTION_RIGHT
+        resideMenu.addMenuItem(feedBackMenuItem, ResideMenu.DIRECTION_LEFT) // or  ResideMenu.DIRECTION_RIGHT
+        resideMenu.addMenuItem(aboutUsMenuItem, ResideMenu.DIRECTION_LEFT) // or  ResideMenu.DIRECTION_RIGHT
+
+
+        val toggle = object : ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+
+            override fun onDrawerOpened(drawerView: View) {
+                super.onDrawerOpened(drawerView)
+            }
+
+            override fun onDrawerClosed(drawerView: View) {
+                super.onDrawerClosed(drawerView)
+            }
+        } // Drawer Toggle Object Made
+        drawer_layout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        toolbar.setNavigationOnClickListener {
+            if (resideMenu.isOpened) {
+                resideMenu.closeMenu()
+            } else {
+                resideMenu.openMenu(ResideMenu.DIRECTION_LEFT)
+            }
         }
 
-//        val toggle = ActionBarDrawerToggle(
-//                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-//        drawer_layout.addDrawerListener(toggle)
-//        toggle.syncState()
-//
-//        nav_view.setNavigationItemSelectedListener(this)
-//        nav_view.setCheckedItem(0)
-        addFragmentWithBackStack(AwesomeGameListFragment(),true)
+            changeFragment(AwesomeGameListFragment());
+
+
+        supportFragmentManager.addOnBackStackChangedListener {
+            Log.i("Tag", "back stack changed ")
+            val backCount = supportFragmentManager.backStackEntryCount
+
+            if (backCount > 0) {
+                val backStackEntry = supportFragmentManager.getBackStackEntryAt(supportFragmentManager.backStackEntryCount - 1)
+                val str = backStackEntry.name
+                val fragment = supportFragmentManager.findFragmentByTag(str)
+                GlobalReferences.getInstance().mCommonFragment = fragment as CommonFragment
+                try {
+                    (GlobalReferences.getInstance().mCommonFragment as CommonFragment).onRefresh()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+            } else {
+                val fragment = supportFragmentManager.findFragmentById(R.id.frame_container)
+                if (fragment != null) {
+                    GlobalReferences.getInstance().mCommonFragment = fragment as CommonFragment
+                    try {
+                        (GlobalReferences.getInstance().mCommonFragment as CommonFragment).onRefresh()
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+
+                }
+            }
+        }
+
     }
 
     override fun onBackPressed() {
-        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
-            drawer_layout.closeDrawer(GravityCompat.START)
+        if (resideMenu.isOpened()) {
+            resideMenu.closeMenu()
         } else {
+            if(supportFragmentManager.backStackEntryCount==1){
+                finish()
+            }else
             super.onBackPressed()
         }
     }
@@ -88,7 +158,6 @@ class HomeActivity : BaseActivity(), ResideMenu.OnMenuListener {
             else -> return super.onOptionsItemSelected(item)
         }
     }
-
 
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <game.trending.com.allinonegame.widget.ProximaNovaSemiBoldTextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="@dimen/_16sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="@string/feedback_text"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/send_feed_back"
+        android:layout_centerHorizontal="true"
+        android:background="@color/c_7e7e7e"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="@string/send_feedback_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+</RelativeLayout>

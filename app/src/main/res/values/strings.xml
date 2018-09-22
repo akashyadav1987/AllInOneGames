@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">AllInOneGames</string>
+    <string name="app_name">Game City</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="feedback_text">Please Mail us your valuable feedback\'s this Application is in its initial state , we are trying to provide the
+    best user experience ,click a button below and mail us what you want in this Application. </string>
+    <string name="send_feedback_text">Send FeedBack</string>
 </resources>

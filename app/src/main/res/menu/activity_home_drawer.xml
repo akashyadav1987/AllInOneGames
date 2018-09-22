@@ -7,8 +7,9 @@
         <item
             android:id="@+id/nav_games"
             android:icon="@drawable/ic_menu_camera"
-            android:title="AllInOneGames" />
+            android:title="Games" />
         <item
+            android:visible="false"
             android:id="@+id/nav_other_apps"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Other Apps" />

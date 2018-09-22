@@ -55,7 +55,7 @@ public class AwesomeGameListFragment extends CommonFragment implements View.OnCl
         open_lara=view.findViewById(R.id.open_lara);
         elemental_one=view.findViewById(R.id.clumsy_bird);
         
-        
+        screenTitle = "Game City";
         
         
         custom_tetris.setOnClickListener(this);
@@ -115,62 +115,67 @@ public class AwesomeGameListFragment extends CommonFragment implements View.OnCl
         
         switch (v.getId()){
             case R.id.cyber_orb:
-                openUrl("http://orb.enclavegames.com/");
+                openUrl("http://orb.enclavegames.com/","Cyber orb");
             break;
             
             case R.id.tetris:
-                openUrl("https://tetris-90067.firebaseapp.com");
+                openUrl("https://tetris-90067.firebaseapp.com","Tetris");
                 break;
             case R.id.two_four_eight:
-                openUrl("http://gabrielecirulli.github.io/2048/");
+                openUrl("http://gabrielecirulli.github.io/2048/","Two Four Eight");
                 break;
             case R.id.pacman:
-                openUrl("http://pacman.platzh1rsch.ch/");
+                openUrl("http://pacman.platzh1rsch.ch/","Pacman");
                 break;
             case R.id.dont_you:
-                openUrl("https://sigill.github.io/dontyoufillit/play.html");
+                openUrl("https://sigill.github.io/dontyoufillit/play.html","Dont You");
                 break;
             case R.id.spashal:
-                openUrl("http://mrrar.github.io/spashal/");
+                openUrl("http://mrrar.github.io/spashal/","Spashal");
                 break;
             case R.id.coil:
-                openUrl("https://lab.hakim.se/coil/");
+                openUrl("https://lab.hakim.se/coil/","Coil");
                 break;
             case R.id.pond:
-                openUrl("https://thepond.zolmeister.com/");
+                openUrl("https://thepond.zolmeister.com/","Pond");
                 break;
             case R.id.pop_win:
-                openUrl("http://dart-lang.github.io/sample-pop_pop_win/");
+                openUrl("http://dart-lang.github.io/sample-pop_pop_win/","Pop Win");
                 break;
             case R.id.sudoku:
-                openUrl("http://baruchel.insomnia247.nl/sudoku-js/sudoku.html");
+                openUrl("http://baruchel.insomnia247.nl/sudoku-js/sudoku.html","Sudoku");
                 break;
             case R.id.maze:
-                openUrl("http://demonixis.github.io/Maze3D/");
+                openUrl("http://demonixis.github.io/Maze3D/","Maze");
                 break;
             case R.id.the_house:
-                openUrl("https://the-house.arturkot.pl/");
+                openUrl("https://the-house.arturkot.pl/","The House");
                 break;
             case R.id.open_lara:
-                openUrl("http://xproger.info/projects/OpenLara/");
+                openUrl("http://xproger.info/projects/OpenLara/","Open Lara");
                 break;
             case R.id.clumsy_bird:
-                openUrl("http://ellisonleao.github.io/clumsy-bird/");
+                openUrl("http://ellisonleao.github.io/clumsy-bird/","Clumsy Bird");
                 break;
         }
         
     }
     
     
-    private void openUrl(String url){
+    private void openUrl(String url,String title){
         WebViewFragment webViewFragment=new WebViewFragment();
         Bundle bundle=new Bundle();
         bundle.putString("url",url);
-        bundle.putString("title","Play Games");
+        bundle.putString("title",title);
         webViewFragment.setArguments(bundle);
         if (((BaseActivity)getActivity()) != null) {
             ((BaseActivity)getActivity()).addFragmentWithBackStack(webViewFragment,true);
         }
 
+    }
+
+    @Override
+    public void onRefresh() {
+        super.onRefresh();
     }
 }

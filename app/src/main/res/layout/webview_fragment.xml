@@ -46,6 +46,7 @@
 
 
     <ProgressBar
+        android:background="@color/c_7e7e7e"
         android:id="@+id/pbHeaderProgress"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
