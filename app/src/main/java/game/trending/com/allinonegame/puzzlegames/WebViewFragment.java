@@ -21,6 +21,7 @@ import game.trending.com.allinonegame.racinggames.CommonFragment;
 public class WebViewFragment extends CommonFragment {
     String url;
     ProgressBar progressBar;
+    WebView webView;
        @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -28,7 +29,7 @@ public class WebViewFragment extends CommonFragment {
         View view = inflater.inflate(R.layout.webview_fragment, null);
 
        // screenTitle = "WebView";
-           WebView webView = (WebView) view.findViewById(R.id.webview);
+         webView = (WebView) view.findViewById(R.id.webview);
            progressBar=view.findViewById(R.id.pbHeaderProgress);
            webView.getSettings().setJavaScriptEnabled(true);
            
@@ -70,6 +71,11 @@ public class WebViewFragment extends CommonFragment {
 
         }
     }
+    
+    
+    
+    
+    
 
 
 }

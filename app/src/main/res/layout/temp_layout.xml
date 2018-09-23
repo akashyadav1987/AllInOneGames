@@ -178,6 +178,12 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/native_ad_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:id="@+id/container_third"
@@ -217,7 +223,7 @@
                             android:layout_weight="1"
 
                             android:gravity="center"
-                            android:text="Don't you fill it"
+                            android:text="Crappy Bird"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
@@ -509,7 +515,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/open_lara"
+                    android:id="@+id/shape_experiment"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -538,7 +544,7 @@
                             android:layout_weight="1"
 
                             android:gravity="center"
-                            android:text="Open Lara"
+                            android:text="Alien Invasion"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
