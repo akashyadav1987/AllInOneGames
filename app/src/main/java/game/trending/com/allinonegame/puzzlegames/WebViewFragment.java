@@ -71,11 +71,5 @@ public class WebViewFragment extends CommonFragment {
 
         }
     }
-    
-    
-    
-    
-    
-
 
 }

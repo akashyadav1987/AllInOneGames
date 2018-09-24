@@ -15,7 +15,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdChoicesView;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
-import com.facebook.ads.AdView;
+import com.facebook.ads.AdSettings;
 import com.facebook.ads.MediaView;
 import com.facebook.ads.NativeAd;
 import com.facebook.ads.NativeAdListener;
@@ -127,8 +127,10 @@ public class AwesomeGameListFragment extends CommonFragment implements View.OnCl
 //        GamesAdapter gamesAdapter = new GamesAdapter(getActivity(),gamesUrl);
 //        game_list.setAdapter(gamesAdapter);
             loadNativeAd();
-        return view;
 
+        AdSettings.addTestDevice("e0af820f-8796-4d2d-ac30-88942666756d");
+
+        return  view;
     }
     
     @Override
@@ -211,7 +213,7 @@ public class AwesomeGameListFragment extends CommonFragment implements View.OnCl
         // now, while you are testing and replace it later when you have signed up.
         // While you are using this temporary code you will only get test ads and if you release
         // your code like this to the Google Play your users will not receive ads (you will get a no fill error).
-        nativeAd = new NativeAd(GlobalReferences.getInstance().baseActivity, "2156359821288536_2156360094621842");
+        nativeAd = new NativeAd(GlobalReferences.getInstance().baseActivity, "2187222101554922_2187222261554906");
         nativeAd.setAdListener(new NativeAdListener() {
             @Override
             public void onMediaDownloaded(Ad ad) {

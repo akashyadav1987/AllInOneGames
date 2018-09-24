@@ -1,13 +1,12 @@
 package game.trending.com.allinonegame
 
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.res.ResourcesCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.view.MotionEvent
-import android.view.View
+import android.view.*
 import com.special.ResideMenu.ResideMenu
 import com.special.ResideMenu.ResideMenuItem
 import game.trending.com.allinonegame.bestgames.AwesomeGameListFragment
@@ -54,10 +53,16 @@ class HomeActivity : BaseActivity(), ResideMenu.OnMenuListener, View.OnClickList
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
         setSupportActionBar(toolbar)
         GlobalReferences.getInstance().baseActivity = this;
         GlobalReferences.getInstance().toolbar = toolbar
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            if(Build.VERSION.SDK_INT>=23){
+                window.statusBarColor = ResourcesCompat.getColor(resources,R.color.c_e3e3e4,null);
+            }
+        }
         // attach to current activity;
         resideMenu = ResideMenu(this)
         resideMenu.setBackground(R.color.white)
