@@ -54,7 +54,7 @@
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Cyber Orb"
+                            android:text="Cyber orb"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
@@ -183,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="visible"/>
+                />
 
             <LinearLayout
                 android:id="@+id/container_third"
@@ -223,7 +223,7 @@
                             android:layout_weight="1"
 
                             android:gravity="center"
-                            android:text="Crappy Bird"
+                            android:text="Crappy bird"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
@@ -544,7 +544,7 @@
                             android:layout_weight="1"
 
                             android:gravity="center"
-                            android:text="Alien Invasion"
+                            android:text="Alien invasion"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
@@ -581,7 +581,7 @@
                             android:layout_weight="1"
 
                             android:gravity="center"
-                            android:text="Clumsy Bird"
+                            android:text="Clumsy bird"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>

@@ -13,6 +13,7 @@ import game.trending.com.allinonegame.bestgames.AwesomeGameListFragment
 import game.trending.com.allinonegame.fragment.AboutUsFragment
 import game.trending.com.allinonegame.fragment.FeedBackFragment
 import game.trending.com.allinonegame.kidsgame.BaseActivity
+import game.trending.com.allinonegame.puzzlegames.WebViewFragment
 import game.trending.com.allinonegame.racinggames.CommonFragment
 import game.trending.com.allinonegame.racinggames.GlobalReferences
 import kotlinx.android.synthetic.main.activity_home.*
@@ -68,6 +69,8 @@ class HomeActivity : BaseActivity(), ResideMenu.OnMenuListener, View.OnClickList
         resideMenu.setBackground(R.color.white)
         resideMenu.attachToActivity(this)
         resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT)
+        resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_LEFT)
+
 
         gamesMenuItem = ResideMenuItem(this, R.drawable.games, "Games")
         feedBackMenuItem = ResideMenuItem(this, R.drawable.ic_feedback, "FeedBack")
@@ -116,12 +119,15 @@ class HomeActivity : BaseActivity(), ResideMenu.OnMenuListener, View.OnClickList
                 val fragment = supportFragmentManager.findFragmentByTag(str)
                 GlobalReferences.getInstance().mCommonFragment = fragment as CommonFragment
                 try {
+                   // resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT)
                     (GlobalReferences.getInstance().mCommonFragment as CommonFragment).onRefresh()
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
 
-            } else {
+            }
+
+            else {
                 val fragment = supportFragmentManager.findFragmentById(R.id.frame_container)
                 if (fragment != null) {
                     GlobalReferences.getInstance().mCommonFragment = fragment as CommonFragment
